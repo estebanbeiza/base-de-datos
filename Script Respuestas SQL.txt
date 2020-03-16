@@ -1,0 +1,33 @@
+--Consultas SQL
+--Respuesta 1:
+select curso_nombre, count(*) 
+from evaluacion_alumn, alumnos, curso 
+where (ea_alumn_codigo = alumn_codigo) and (alumn_curso_id = curso_id) 
+group by curso_nombre; 
+
+--Respuesta 2:
+select distinct curso_nombre as curso_sin_evaluacion
+from alumnos, curso
+where alumn_codigo not in (select alumn_codigo 
+from curso, alumnos, evaluacion_alumn 
+where curso_id = alumn_curso_id and alumn_codigo = ea_alumn_codigo)
+and alumn_curso_id = curso_id;
+
+--Respuesta 3:
+--PENDIENTE
+
+--Respuesta 4:
+select curso_nombre, count(*) as Cantidad_Alumnos 
+from curso inner join alumnos on alumn_curso_id = curso_id group by curso_nombre;
+
+--Respuesta 5:
+--PENDIENTE
+
+--Respuesta 6: 
+--PENDIENTE
+
+--Respuesta 7:
+--PENDIENTE
+
+--Respuesta 8:
+--PENDIENTE

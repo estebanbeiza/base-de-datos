@@ -1,0 +1,424 @@
+--insertar datos tabla TEST
+Insert into TEST  values ('1001','Java','Preguntas acerca del lenguaje Java','Programación FullStack Java Trainnie','unidad de educacion','Esteban Beiza',to_date('13/03/20','DD/MM/RR'));
+Insert into TEST  values ('2002','Programacion Android','Preguntas sobre programacion Android','Programación Android','Unidad Android','Natalia Ponce',to_date('13/03/20','DD/MM/RR'));
+Insert into TEST  values ('2003','Programacion Python','Preguntas sobre programacion Python','Programación Python','Unidad IA','Natalia Ponce',to_date('13/03/20','DD/MM/RR'));
+
+--insertar datos tabla PREGUNTAS
+Insert into PREGUNTAS values ('1','¿Cuál es la descripción que crees que define mejor el concepto ''clase'' en la programación orientada a objetos?','10','1001');
+Insert into PREGUNTAS values ('2','¿Qué elementos crees que definen a un objeto?','10','1001');
+Insert into PREGUNTAS values ('3','¿Qué código de los siguientes tiene que ver con la herencia?','10','1001');
+Insert into PREGUNTAS values ('4','¿Qué significa instanciar una clase?','10','1001');
+Insert into PREGUNTAS values ('5','En Java, ¿a qué nos estamos refiriendo si hablamos de ''Swing''?','10','1001');
+Insert into PREGUNTAS values ('6','¿Qué es Eclipse?','10','1001');
+Insert into PREGUNTAS values ('7','¿Qué es el bytecode en Java?','10','1001');
+Insert into PREGUNTAS values ('8','¿Qué código asociarías a una Interfaz en Java?','10','1001');
+Insert into PREGUNTAS values ('9','¿Qué significa sobrecargar (overload) un método?','10','1001');
+Insert into PREGUNTAS values ('10','¿Qué es una excepción?','10','1001');
+
+Insert into PREGUNTAS  values ('11','¿Cuál de las siguientes es una característica de Android?','10','2002');
+Insert into PREGUNTAS  values ('12','¿Cuál de los siguientes eventos ocurre más tarde?','10','2002');
+Insert into PREGUNTAS  values ('13','¿Qué plataforma para móviles dispone de mayor variedad de terminales?','10','2002');
+Insert into PREGUNTAS  values ('14','¿Qué plataforma para móviles no permite ejecutar código nativo del procesador?','10','2002');
+Insert into PREGUNTAS  values ('15','¿Cuál de las siguientes capas de la Arquitectura Android serás capaz de modificar al terminal el curso?','10','2002');
+Insert into PREGUNTAS  values ('16','¿Qué capa de la arquitectura Android no utilizaríamos si en lugar de desarrollar aplicaciones en Java las crearas en código nativo?','10','2002');
+Insert into PREGUNTAS  values ('17','¿Cuál de los siguientes componentes permite interpretar código Java (bytecodes)?','10','2002');
+Insert into PREGUNTAS  values ('18','¿Cuál de los siguientes nombres comerciales apareció más tarde? Froyo','10','2002');
+Insert into PREGUNTAS  values ('19','Indica que afirmación es cierta:','10','2002');
+Insert into PREGUNTAS  values ('20','¿En qué carpetas se almacenan el código Java de una aplicación?','10','2002');
+
+
+--insertar datos tabla ALTERNATIVAS
+Insert into ALTERNATIVAS values ('1','Es un concepto similar al de ''array''','0','0','1');
+Insert into ALTERNATIVAS values ('2','Es un tipo particular de variable','0','0','1');
+Insert into ALTERNATIVAS  values ('3','Es un modelo o plantilla a partir de la cual creamos objetos','1','100','1');
+Insert into ALTERNATIVAS  values ('4','Es una categoria de datos ordenada secuencialmente','0','0','1');
+Insert into ALTERNATIVAS  values ('5','Sus cardinalidad y su tipo','0','0','2');
+Insert into ALTERNATIVAS values ('6','Sus atributos y sus métodos','1','100','2');
+Insert into ALTERNATIVAS  values ('7','La forma en que establece comunicación e intercambia mensajes','0','0','2');
+Insert into ALTERNATIVAS  values ('8','Su interfaz y los eventos asociados','0','0','2');
+Insert into ALTERNATIVAS  values ('9','public class Componente extends Producto','0','0','3');
+Insert into ALTERNATIVAS  values ('10','public class Componente inherit Producto','0','0','3');
+Insert into ALTERNATIVAS  values ('11','public class Componente implements Producto','1','100','3');
+Insert into ALTERNATIVAS  values ('12','public class Componente belong to Producto','0','0','3');
+Insert into ALTERNATIVAS  values ('13','Duplicar una clase','0','0','4');
+Insert into ALTERNATIVAS  values ('14','Eliminar una clase','0','0','4');
+Insert into ALTERNATIVAS  values ('15','Crear un objeto a partir de la clase','1','100','4');
+Insert into ALTERNATIVAS  values ('16','Conectar dos clases entre sí','0','0','4');
+Insert into ALTERNATIVAS  values ('17','Una función utilizada para intercambiar valores','0','0','5');
+Insert into ALTERNATIVAS  values ('18','Es el sobrenombre de la versión 1.3 del JDK','0','0','5');
+Insert into ALTERNATIVAS  values ('19','Un framework específico para Android','0','0','5');
+Insert into ALTERNATIVAS  values ('20','Una librería para construir interfaces gráficas','1','100','5');
+Insert into ALTERNATIVAS  values ('21','Una libreria de Java','0','0','6');
+Insert into ALTERNATIVAS  values ('22','Una versión de Java especial para servidores','0','0','6');
+Insert into ALTERNATIVAS  values ('23','Un IDE para desarrollar aplicaciones','1','100','6');
+Insert into ALTERNATIVAS  values ('24','Ninguna de las anteriores','0','0','6');
+Insert into ALTERNATIVAS  values ('25','El formato de intercambio de datos','0','0','7');
+Insert into ALTERNATIVAS  values ('26','El formato que obtenemos tras compilar un fuente .java','1','100','7');
+Insert into ALTERNATIVAS  values ('27','Un tipo de variable','0','0','7');
+Insert into ALTERNATIVAS  values ('28','Un depurador de código','0','0','7');
+Insert into ALTERNATIVAS  values ('29','public class Componente interface Product','0','0','8');
+Insert into ALTERNATIVAS  values ('30','Componente cp = new Componente (interfaz)','0','0','8');
+Insert into ALTERNATIVAS  values ('31','public class Componente implements Printable','1','100','8');
+Insert into ALTERNATIVAS  values ('32','Componente cp = new Componente.interfaz','0','0','8');
+Insert into ALTERNATIVAS  values ('33','Editarlo para modificar su comportamiento','0','0','9');
+Insert into ALTERNATIVAS  values ('34','Cambiarle el nombre dejándolo con la misma funcionalidad','0','0','9');
+Insert into ALTERNATIVAS  values ('35','Crear un método con el mismo nombre pero diferentes argumentos','1','100','9');
+Insert into ALTERNATIVAS  values ('36','Añadirle funcionalidades a un método','0','0','9');
+Insert into ALTERNATIVAS  values ('37','Un error que lanza un método cuando algo va mal','1','100','10');
+Insert into ALTERNATIVAS  values ('38','Un objeto que no puede ser instanciado','0','0','10');
+Insert into ALTERNATIVAS  values ('39','Un bucle que no finaliza','0','0','10');
+Insert into ALTERNATIVAS  values ('40','Un tipo de evento muy utilizado al crear interfaces','0','0','10');
+
+Insert into ALTERNATIVAS  values ('41','Programas compatibles con el sistema operativo Linux','0','0','11');
+Insert into ALTERNATIVAS  values ('42','Podemos utilizarla de forma libre, sin tener que pagar royalties','1','100','11');
+Insert into ALTERNATIVAS  values ('43','Portabilidad asegurada gracias a la máquina virtual .Net','0','0','11');
+Insert into ALTERNATIVAS  values ('44','Google controla toda la cadena de valor: desde los dispositivos, pasando por la comercialización, hasta las aplicaciones que podemos ejecutar','0','0','11');
+Insert into ALTERNATIVAS  values ('45','Android se consolida como uno de la plataforma para móviles más utilizada en EE.UU','1','100','12');
+Insert into ALTERNATIVAS  values ('46','Google adquiere Android Inc','0','0','12');
+Insert into ALTERNATIVAS  values ('47','Se crea el consorcio Handset Alliance','0','0','12');
+Insert into ALTERNATIVAS  values ('48','Se lanza una primera versión del Android SDK','0','0','12');
+Insert into ALTERNATIVAS  values ('49','Apple iOS','0','0','13');
+Insert into ALTERNATIVAS  values ('50','Android','1','100','13');
+Insert into ALTERNATIVAS  values ('51','Windows Phone','0','0','13');
+Insert into ALTERNATIVAS  values ('52','BlackBerry','0','0','13');
+Insert into ALTERNATIVAS  values ('53','Symbian','1','100','14');
+Insert into ALTERNATIVAS  values ('54','Apple iOS','0','0','14');
+Insert into ALTERNATIVAS  values ('55','Android','0','0','14');
+Insert into ALTERNATIVAS  values ('56','Windows Phone','0','0','14');
+Insert into ALTERNATIVAS  values ('57','Nivel de Aplicaciones','1','100','15');
+Insert into ALTERNATIVAS  values ('58','Entorno de Aplicación','0','0','15');
+Insert into ALTERNATIVAS  values ('59','Librería nativa','0','0','15');
+Insert into ALTERNATIVAS  values ('60','Núcleo Linux','0','0','15');
+Insert into ALTERNATIVAS  values ('61','Nivel de Aplicaciones','0','0','16');
+Insert into ALTERNATIVAS  values ('62','Librerías nativas','0','0','16');
+Insert into ALTERNATIVAS  values ('63','Runtime de Android','1','100','16');
+Insert into ALTERNATIVAS  values ('64','Núcleo Linux','0','0','16');
+Insert into ALTERNATIVAS  values ('65','Java Runtime Environment','1','100','17');
+Insert into ALTERNATIVAS  values ('66','Eclipse IDE','0','0','17');
+Insert into ALTERNATIVAS  values ('67','Android SDK','0','0','17');
+Insert into ALTERNATIVAS  values ('68','Eclipse Plug-in (Android Development Toolkit ADT)','0','0','17');
+Insert into ALTERNATIVAS  values ('69','Froyo','0','0','18');
+Insert into ALTERNATIVAS  values ('70','Cupcake','0','0','18');
+Insert into ALTERNATIVAS  values ('71','Éclair','0','0','18');
+Insert into ALTERNATIVAS  values ('72','Gingerbread','1','100','18');
+Insert into ALTERNATIVAS  values ('73','Dos versiones de Android pueden tener un mismo nivel de API','1','100','19');
+Insert into ALTERNATIVAS  values ('74','Dos niveles de API pueden corresponder a la misma versión','0','0','19');
+Insert into ALTERNATIVAS  values ('75','Dos nombres comerciales corresponden a la misma versión','0','0','19');
+Insert into ALTERNATIVAS  values ('76','si, aveces','0','0','19');
+Insert into ALTERNATIVAS  values ('77','res y assets','0','0','20');
+Insert into ALTERNATIVAS  values ('78','res/raw y res/xml','0','0','20');
+Insert into ALTERNATIVAS  values ('79','src y gen','1','100','20');
+Insert into ALTERNATIVAS  values ('80','xml','0','0','20');
+
+--insertar datos tabla CURSO
+Insert into CURSO values ('111','Curso Java');
+Insert into CURSO values ('222','Curso android');
+Insert into CURSO values ('333','Curso Python');
+
+--insertar datos tabla ALUMNOS
+Insert into ALUMNOS  values ('1','Esteban','Beiza','111');
+Insert into ALUMNOS  values ('2','Natalia','Ponce','111');
+Insert into ALUMNOS  values ('3','Carlos','Acosta','111');
+Insert into ALUMNOS  values ('4','Daniel','Muñoz','111');
+Insert into ALUMNOS  values ('5','Marcelo','Ramirez','111');
+Insert into ALUMNOS  values ('6','Pedro','Picapiedra','111');
+Insert into ALUMNOS  values ('7','Tatiana','Bustos','111');
+Insert into ALUMNOS  values ('8','Carolina','moreno','111');
+Insert into ALUMNOS  values ('9','Marco','Nuñez','111');
+Insert into ALUMNOS  values ('10','Sebastian','Acuña','111');
+Insert into ALUMNOS  values ('11','Catalina','Peña','222');
+Insert into ALUMNOS  values ('12','Maria','Gonzalez','222');
+Insert into ALUMNOS  values ('13','Patricia','Lopez','222');
+Insert into ALUMNOS  values ('14','Manuel','Lopez','222');
+Insert into ALUMNOS  values ('15','Gonzalo','Cancino','222');
+Insert into ALUMNOS  values ('16','Mauricio','Fuentes','222');
+Insert into ALUMNOS  values ('17','Jorge','Sepulveda','222');
+Insert into ALUMNOS  values ('18','Ana','Calderon','222');
+Insert into ALUMNOS  values ('19','Diego','Cea','222');
+Insert into ALUMNOS  values ('20','Paola','Carmona','222');
+Insert into ALUMNOS  values ('21','Py','thon','333');
+
+--insertar datos tabla EVALUACION_ALUMN
+Insert into EVALUACION_ALUMN  values ('1','1','1001');
+Insert into EVALUACION_ALUMN  values ('2','2','1001');
+Insert into EVALUACION_ALUMN  values ('3','3','1001');
+Insert into EVALUACION_ALUMN  values ('4','4','1001');
+Insert into EVALUACION_ALUMN  values ('5','5','1001');
+Insert into EVALUACION_ALUMN  values ('6','6','1001');
+Insert into EVALUACION_ALUMN  values ('7','7','1001');
+Insert into EVALUACION_ALUMN  values ('8','8','1001');
+Insert into EVALUACION_ALUMN  values ('9','9','1001');
+Insert into EVALUACION_ALUMN  values ('10','10','1001');
+
+Insert into EVALUACION_ALUMN  values ('11','11','2002');
+Insert into EVALUACION_ALUMN  values ('12','12','2002');
+Insert into EVALUACION_ALUMN  values ('13','13','2002');
+Insert into EVALUACION_ALUMN  values ('14','14','2002');
+Insert into EVALUACION_ALUMN  values ('15','15','2002');
+Insert into EVALUACION_ALUMN  values ('16','16','2002');
+Insert into EVALUACION_ALUMN  values ('17','17','2002');
+Insert into EVALUACION_ALUMN  values ('18','18','2002');
+Insert into EVALUACION_ALUMN  values ('19','19','2002');
+Insert into EVALUACION_ALUMN  values ('20','20','2002');
+
+
+
+--insertar datos RESP_ALUMN
+--Alumno_codigo = 1 
+--todas buenas
+Insert into RESP_ALUMN values ('1','1','1','3');
+Insert into RESP_ALUMN values ('2','2','1','6');
+Insert into RESP_ALUMN values ('3','3','1','11');
+Insert into RESP_ALUMN values ('4','4','1','15');
+Insert into RESP_ALUMN values ('5','5','1','20');
+Insert into RESP_ALUMN values ('6','6','1','23');
+Insert into RESP_ALUMN values ('7','7','1','26');
+Insert into RESP_ALUMN values ('8','8','1','31');
+Insert into RESP_ALUMN values ('9','9','1','35');
+Insert into RESP_ALUMN values ('10','10','1','37');
+
+--Alumno_codigo = 2
+--todas buenas
+Insert into RESP_ALUMN values ('11','1','2','3');
+Insert into RESP_ALUMN values ('12','2','2','6');
+Insert into RESP_ALUMN values ('13','3','2','11');
+Insert into RESP_ALUMN values ('14','4','2','15');
+Insert into RESP_ALUMN values ('15','5','2','20');
+Insert into RESP_ALUMN values ('16','6','2','23');
+Insert into RESP_ALUMN values ('17','7','2','26');
+Insert into RESP_ALUMN values ('18','8','2','31');
+Insert into RESP_ALUMN values ('19','9','2','35');
+Insert into RESP_ALUMN values ('20','10','2','37');
+
+--Alumno_codigo = 3
+--todas buenas
+Insert into RESP_ALUMN values ('21','1','3','3');
+Insert into RESP_ALUMN values ('22','2','3','6');
+Insert into RESP_ALUMN values ('23','3','3','11');
+Insert into RESP_ALUMN values ('24','4','3','15');
+Insert into RESP_ALUMN values ('25','5','3','20');
+Insert into RESP_ALUMN values ('26','6','3','23');
+Insert into RESP_ALUMN values ('27','7','3','26');
+Insert into RESP_ALUMN values ('28','8','3','31');
+Insert into RESP_ALUMN values ('29','9','3','35');
+Insert into RESP_ALUMN values ('30','10','3','37');
+
+--Alumno_codigo = 4
+--todas buenas
+Insert into RESP_ALUMN values ('31','1','4','3');
+Insert into RESP_ALUMN values ('32','2','4','6');
+Insert into RESP_ALUMN values ('33','3','4','11');
+Insert into RESP_ALUMN values ('34','4','4','15');
+Insert into RESP_ALUMN values ('35','5','4','20');
+Insert into RESP_ALUMN values ('36','6','4','23');
+Insert into RESP_ALUMN values ('37','7','4','26');
+Insert into RESP_ALUMN values ('38','8','4','31');
+Insert into RESP_ALUMN values ('39','9','4','35');
+Insert into RESP_ALUMN values ('40','10','4','37');
+
+--Alumno_codigo = 5
+--todas buenas
+Insert into RESP_ALUMN values ('41','1','5','3');
+Insert into RESP_ALUMN values ('42','2','5','6');
+Insert into RESP_ALUMN values ('43','3','5','11');
+Insert into RESP_ALUMN values ('44','4','5','15');
+Insert into RESP_ALUMN values ('45','5','5','20');
+Insert into RESP_ALUMN values ('46','6','5','23');
+Insert into RESP_ALUMN values ('47','7','5','26');
+Insert into RESP_ALUMN values ('48','8','5','31');
+Insert into RESP_ALUMN values ('49','9','5','35');
+Insert into RESP_ALUMN values ('50','10','5','37');
+
+--Alumno_codigo = 6
+--3 malas
+Insert into RESP_ALUMN values ('51','1','6','3');
+Insert into RESP_ALUMN values ('52','2','6','6');
+Insert into RESP_ALUMN values ('53','3','6','10');
+Insert into RESP_ALUMN values ('54','4','6','15');
+Insert into RESP_ALUMN values ('55','5','6','20');
+Insert into RESP_ALUMN values ('56','6','6','22');
+Insert into RESP_ALUMN values ('57','7','6','26');
+Insert into RESP_ALUMN values ('58','8','6','31');
+Insert into RESP_ALUMN values ('59','9','6','35');
+Insert into RESP_ALUMN values ('60','10','6','39');
+
+--Alumno_codigo = 7
+--todas buenas
+Insert into RESP_ALUMN values ('61','1','7','3');
+Insert into RESP_ALUMN values ('62','2','7','6');
+Insert into RESP_ALUMN values ('63','3','7','11');
+Insert into RESP_ALUMN values ('64','4','7','15');
+Insert into RESP_ALUMN values ('65','5','7','20');
+Insert into RESP_ALUMN values ('66','6','7','23');
+Insert into RESP_ALUMN values ('67','7','7','26');
+Insert into RESP_ALUMN values ('68','8','7','31');
+Insert into RESP_ALUMN values ('69','9','7','35');
+Insert into RESP_ALUMN values ('60','10','7','37');
+
+--Alumno_codigo = 8
+--todas buenas
+Insert into RESP_ALUMN values ('71','1','8','3');
+Insert into RESP_ALUMN values ('72','2','8','6');
+Insert into RESP_ALUMN values ('73','3','8','11');
+Insert into RESP_ALUMN values ('74','4','8','15');
+Insert into RESP_ALUMN values ('75','5','8','20');
+Insert into RESP_ALUMN values ('76','6','8','23');
+Insert into RESP_ALUMN values ('77','7','8','26');
+Insert into RESP_ALUMN values ('78','8','8','31');
+Insert into RESP_ALUMN values ('79','9','8','35');
+Insert into RESP_ALUMN values ('80','10','8','37');
+
+--Alumno_codigo = 9
+--Omitio 2 y 1 mala
+Insert into RESP_ALUMN values ('81','1','9','3');
+Insert into RESP_ALUMN values ('82','3','9','11');
+Insert into RESP_ALUMN values ('83','4','9','14');
+Insert into RESP_ALUMN values ('84','5','9','20');
+Insert into RESP_ALUMN values ('85','6','9','23');
+Insert into RESP_ALUMN values ('86','7','9','26');
+Insert into RESP_ALUMN values ('87','8','9','31');
+Insert into RESP_ALUMN values ('88','9','9','35');
+
+--Alumno_codigo = 10
+--todas buenas
+Insert into RESP_ALUMN values ('89','1','10','3');
+Insert into RESP_ALUMN values ('90','2','10','6');
+Insert into RESP_ALUMN values ('91','3','10','11');
+Insert into RESP_ALUMN values ('92','4','10','15');
+Insert into RESP_ALUMN values ('93','5','10','20');
+Insert into RESP_ALUMN values ('94','6','10','23');
+Insert into RESP_ALUMN values ('95','7','10','26');
+Insert into RESP_ALUMN values ('96','8','10','31');
+Insert into RESP_ALUMN values ('97','9','10','35');
+Insert into RESP_ALUMN values ('98','10','10','37');
+
+--Alumno_codigo = 11
+--todas buenas
+Insert into RESP_ALUMN values ('99','11','11','42');
+Insert into RESP_ALUMN values ('100','12','11','45');
+Insert into RESP_ALUMN values ('101','13','11','50');
+Insert into RESP_ALUMN values ('102','14','11','53');
+Insert into RESP_ALUMN values ('103','15','11','57');
+Insert into RESP_ALUMN values ('104','16','11','63');
+Insert into RESP_ALUMN values ('105','17','11','65');
+Insert into RESP_ALUMN values ('106','18','11','72');
+Insert into RESP_ALUMN values ('107','19','11','73');
+Insert into RESP_ALUMN values ('108','20','11','79');
+
+--Alumno_codigo = 12
+--todas buenas
+Insert into RESP_ALUMN values ('109','11','12','42');
+Insert into RESP_ALUMN values ('110','12','12','45');
+Insert into RESP_ALUMN values ('111','13','12','50');
+Insert into RESP_ALUMN values ('112','14','12','53');
+Insert into RESP_ALUMN values ('113','15','12','57');
+Insert into RESP_ALUMN values ('114','16','12','63');
+Insert into RESP_ALUMN values ('115','17','12','65');
+Insert into RESP_ALUMN values ('116','18','12','72');
+Insert into RESP_ALUMN values ('117','19','12','73');
+Insert into RESP_ALUMN values ('118','20','12','79');
+
+--Alumno_codigo = 13
+--todas buenas
+Insert into RESP_ALUMN values ('119','11','13','42');
+Insert into RESP_ALUMN values ('120','12','13','45');
+Insert into RESP_ALUMN values ('121','13','13','50');
+Insert into RESP_ALUMN values ('122','14','13','53');
+Insert into RESP_ALUMN values ('123','15','13','57');
+Insert into RESP_ALUMN values ('124','16','13','63');
+Insert into RESP_ALUMN values ('125','17','13','65');
+Insert into RESP_ALUMN values ('126','18','13','72');
+Insert into RESP_ALUMN values ('127','19','13','73');
+Insert into RESP_ALUMN values ('128','20','13','79');
+
+
+--Alumno_codigo = 14
+--3 malas
+Insert into RESP_ALUMN values ('129','11','14','42');
+Insert into RESP_ALUMN values ('130','12','14','47');
+Insert into RESP_ALUMN values ('131','13','14','50');
+Insert into RESP_ALUMN values ('132','14','14','54');
+Insert into RESP_ALUMN values ('133','15','14','57');
+Insert into RESP_ALUMN values ('134','16','14','63');
+Insert into RESP_ALUMN values ('135','17','14','65');
+Insert into RESP_ALUMN values ('136','18','14','71');
+Insert into RESP_ALUMN values ('137','19','14','73');
+Insert into RESP_ALUMN values ('138','20','14','79');
+
+--Alumno_codigo = 15
+--todas buenas
+Insert into RESP_ALUMN values ('139','11','15','42');
+Insert into RESP_ALUMN values ('140','12','15','45');
+Insert into RESP_ALUMN values ('141','13','15','50');
+Insert into RESP_ALUMN values ('142','14','15','53');
+Insert into RESP_ALUMN values ('143','15','15','57');
+Insert into RESP_ALUMN values ('144','16','15','63');
+Insert into RESP_ALUMN values ('145','17','15','65');
+Insert into RESP_ALUMN values ('146','18','15','72');
+Insert into RESP_ALUMN values ('147','19','15','73');
+Insert into RESP_ALUMN values ('148','20','15','79');
+
+--Alumno_codigo = 16
+--Omitio 2 y 1 mala
+Insert into RESP_ALUMN values ('149','11','16','42');
+Insert into RESP_ALUMN values ('150','12','16','45');
+Insert into RESP_ALUMN values ('151','14','16','53');
+Insert into RESP_ALUMN values ('152','15','16','57');
+Insert into RESP_ALUMN values ('153','16','16','63');
+Insert into RESP_ALUMN values ('154','17','16','65');
+Insert into RESP_ALUMN values ('155','19','16','73');
+Insert into RESP_ALUMN values ('156','20','16','80');
+
+--Alumno_codigo = 17
+--todas buenas
+Insert into RESP_ALUMN values ('157','11','17','42');
+Insert into RESP_ALUMN values ('158','12','17','45');
+Insert into RESP_ALUMN values ('159','13','17','50');
+Insert into RESP_ALUMN values ('160','14','17','53');
+Insert into RESP_ALUMN values ('161','15','17','57');
+Insert into RESP_ALUMN values ('162','16','17','63');
+Insert into RESP_ALUMN values ('163','17','17','65');
+Insert into RESP_ALUMN values ('164','18','17','72');
+Insert into RESP_ALUMN values ('165','19','17','73');
+Insert into RESP_ALUMN values ('166','20','17','79');
+
+--Alumno_codigo = 18
+--todas buenas
+Insert into RESP_ALUMN values ('177','11','18','42');
+Insert into RESP_ALUMN values ('178','12','18','45');
+Insert into RESP_ALUMN values ('179','13','18','50');
+Insert into RESP_ALUMN values ('170','14','18','53');
+Insert into RESP_ALUMN values ('171','15','18','57');
+Insert into RESP_ALUMN values ('172','16','18','63');
+Insert into RESP_ALUMN values ('173','17','18','65');
+Insert into RESP_ALUMN values ('174','18','18','72');
+Insert into RESP_ALUMN values ('175','19','18','73');
+Insert into RESP_ALUMN values ('176','20','18','79');
+
+--Alumno_codigo = 19 
+--todas buenas
+Insert into RESP_ALUMN values ('177','11','19','42');
+Insert into RESP_ALUMN values ('178','12','19','45');
+Insert into RESP_ALUMN values ('179','13','19','50');
+Insert into RESP_ALUMN values ('180','14','19','53');
+Insert into RESP_ALUMN values ('181','15','19','57');
+Insert into RESP_ALUMN values ('182','16','19','63');
+Insert into RESP_ALUMN values ('183','17','19','65');
+Insert into RESP_ALUMN values ('184','18','19','72');
+Insert into RESP_ALUMN values ('185','19','19','73');
+Insert into RESP_ALUMN values ('186','20','19','79');
+
+--Alumno_codigo = 20 
+--3 malas
+Insert into RESP_ALUMN values ('187','11','20','42');  
+Insert into RESP_ALUMN values ('188','12','20','46'); 
+Insert into RESP_ALUMN values ('189','13','20','50'); 
+Insert into RESP_ALUMN values ('190','14','20','54'); 
+Insert into RESP_ALUMN values ('191','15','20','57'); 
+Insert into RESP_ALUMN values ('192','16','20','63');  
+Insert into RESP_ALUMN values ('193','17','20','65');  
+Insert into RESP_ALUMN values ('194','18','20','71');  
+Insert into RESP_ALUMN values ('195','19','20','73');  
+Insert into RESP_ALUMN values ('196','20','20','79'); 
+
+--fin carga de datos

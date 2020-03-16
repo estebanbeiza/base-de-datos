@@ -1,0 +1,105 @@
+DROP TABLE alternativas CASCADE CONSTRAINTS;
+
+DROP TABLE alumnos CASCADE CONSTRAINTS;
+
+DROP TABLE curso CASCADE CONSTRAINTS;
+
+DROP TABLE evaluacion_alumn CASCADE CONSTRAINTS;
+
+DROP TABLE preguntas CASCADE CONSTRAINTS;
+
+DROP TABLE resp_alumn CASCADE CONSTRAINTS;
+
+DROP TABLE test CASCADE CONSTRAINTS;
+
+CREATE TABLE alternativas (
+    alt_id           INTEGER NOT NULL,
+    alt_descripcion  VARCHAR2(150) NOT NULL,
+    alt_valor        CHAR(1) NOT NULL,
+    alt_porcentaje   INTEGER NOT NULL,
+    alt_preg_id      INTEGER NOT NULL
+);
+
+ALTER TABLE alternativas ADD CONSTRAINT alternativas_pk PRIMARY KEY ( alt_id );
+
+CREATE TABLE alumnos (
+    alumn_codigo    INTEGER NOT NULL,
+    alumn_nombre    VARCHAR2(100) NOT NULL,
+    alumn_apellido  VARCHAR2(100) NOT NULL,
+    alumn_curso_id  INTEGER NOT NULL
+);
+
+ALTER TABLE alumnos ADD CONSTRAINT alumnos_pk PRIMARY KEY ( alumn_codigo );
+
+CREATE TABLE curso (
+    curso_id      INTEGER NOT NULL,
+    curso_nombre  VARCHAR2(100) NOT NULL
+);
+
+ALTER TABLE curso ADD CONSTRAINT curso_pk PRIMARY KEY ( curso_id );
+
+CREATE TABLE evaluacion_alumn (
+    ea_id            INTEGER NOT NULL,
+    ea_alumn_codigo  INTEGER NOT NULL,
+    ea_test_id       INTEGER NOT NULL
+);
+
+ALTER TABLE evaluacion_alumn ADD CONSTRAINT evaluacion_alumn_pk PRIMARY KEY ( ea_id );
+
+CREATE TABLE preguntas (
+    preg_id         INTEGER NOT NULL,
+    preg_enunciado  VARCHAR2(150) NOT NULL,
+    preg_puntaje    INTEGER NOT NULL,
+    preg_test_id    INTEGER NOT NULL
+);
+
+ALTER TABLE preguntas ADD CONSTRAINT preguntas_pk PRIMARY KEY ( preg_id );
+
+CREATE TABLE resp_alumn (
+    ra_id            INTEGER NOT NULL,
+    ra_preg_id       INTEGER NOT NULL,
+    ra_alumn_codigo  INTEGER NOT NULL,
+    ra_alt_id        INTEGER NOT NULL
+);
+
+ALTER TABLE resp_alumn ADD CONSTRAINT resp_alumn_pk PRIMARY KEY ( ra_id );
+
+CREATE TABLE test (
+    test_id              INTEGER NOT NULL,
+    test_nombre          VARCHAR2(100) NOT NULL,
+    test_descripcion     VARCHAR2(100) NOT NULL,
+    test_programa        VARCHAR2(100) NOT NULL,
+    test_unidad          VARCHAR2(100) NOT NULL,
+    test_autor           VARCHAR2(100) NOT NULL,
+    test_fecha_creacion  DATE NOT NULL
+);
+
+ALTER TABLE test ADD CONSTRAINT test_pk PRIMARY KEY ( test_id );
+
+ALTER TABLE alternativas
+    ADD CONSTRAINT alternativas_preguntas_fk FOREIGN KEY ( alt_preg_id )
+        REFERENCES preguntas ( preg_id );
+
+ALTER TABLE alumnos
+    ADD CONSTRAINT alumnos_curso_fk FOREIGN KEY ( alumn_curso_id )
+        REFERENCES curso ( curso_id );
+
+ALTER TABLE evaluacion_alumn
+    ADD CONSTRAINT evaluacion_alumn_alumnos_fk FOREIGN KEY ( ea_alumn_codigo )
+        REFERENCES alumnos ( alumn_codigo );
+
+ALTER TABLE evaluacion_alumn
+    ADD CONSTRAINT evaluacion_alumn_test_fk FOREIGN KEY ( ea_test_id )
+        REFERENCES test ( test_id );
+
+ALTER TABLE preguntas
+    ADD CONSTRAINT preguntas_test_fk FOREIGN KEY ( preg_test_id )
+        REFERENCES test ( test_id );
+
+ALTER TABLE resp_alumn
+    ADD CONSTRAINT resp_alumn_alumnos_fk FOREIGN KEY ( ra_alumn_codigo )
+        REFERENCES alumnos ( alumn_codigo );
+
+ALTER TABLE resp_alumn
+    ADD CONSTRAINT resp_alumn_preguntas_fk FOREIGN KEY ( ra_preg_id )
+        REFERENCES preguntas ( preg_id );
